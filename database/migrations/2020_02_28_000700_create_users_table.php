@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('phone_number', 32)->unique();
             $table->string('password', 128);
             $table->string('email_varification_token')->nullable();
-            $table->timestamps('email_verified')->default(0);
+            $table->tinyInteger('email_verified')->default(0);
             $table->string('facebook_id', 128)->nullable();
             $table->string('google_id', 128)->nullable();
             $table->rememberToken();
