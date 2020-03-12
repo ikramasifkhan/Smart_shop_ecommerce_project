@@ -22,7 +22,7 @@ class Product extends Model implements HasMedia
         parent::boot();
 
         static::creating(function($product){
-            $product->slug=Str::str_slug($product->name, '-');
+            $product->slug=Str::slug($product->name, '-');
         });
     }
 
